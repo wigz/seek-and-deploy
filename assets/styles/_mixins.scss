@@ -1,0 +1,50 @@
+@function strip-unit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+@mixin fluid-val($prop, $min-vw, $max-vw, $min-val, $max-val) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-val);
+  $u4: unit($max-val);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      #{$prop}: $min-val;
+      @media screen and (min-width: $min-vw) {
+        #{$prop}: calc(#{$min-val} + #{strip-unit($max-val - $min-val)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        #{$prop}: $max-val;
+      }
+    }
+  }
+}
+
+@mixin respond-to($mq) {
+  @media all and #{$mq} {
+    @content;
+  }
+}
+
+@mixin can-hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin aspect-ratio($ratio) {
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: $ratio;
+  }
+}
+
+@mixin prevent-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

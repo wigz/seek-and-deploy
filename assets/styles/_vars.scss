@@ -1,0 +1,38 @@
+// Colors
+$color-black: #000000;
+$color-white: #ffffff;
+
+// Spacing
+$spacing-extra-large: 48px;
+$spacing-large: 32px;
+$spacing-normal: 24px;
+$spacing-small: 12px;
+$spacing-extra-small: 6px;
+
+// Fonts
+
+// Speeds
+$speed-demon: 333ms;
+$speed-metal: 666ms;
+
+// Eases
+$evil-ease: cubic-bezier(0.666, 0.000, 0.333, 1.000);
+
+/* Media Queries */
+$fluid-min: 768px;
+$fluid-max: 1280px;
+$tablet:             '(min-width: 768px)';
+$tablet-landscape:   '(min-width: 768px) and (orientation: landscape)';
+$large-tablet:       '(min-width: 960px)';
+$desktop:            '(min-width: 1280px)';
+$average-desktop:    '(min-width: 1440px)';
+$macbook:            '(min-width: 1680px)';
+$retina-macbook:     '(min-width: 1920px)';
+$largest-screens:    '(min-width: 2000px)';
+$landscape:          '(orientation: landscape)';
+$portrait:           '(orientation: portrait)';
+
+/* Color function for SVG mixins */
+@function svgColorMaker($color) {
+  @return '%23' + str-slice('#{$color}', 2, -1);
+}
