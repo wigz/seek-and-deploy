@@ -30,9 +30,8 @@ export default {
       "we fight for the user",
       "setec astronomy ... too many secrets",
       "envision a future free from their control",
-      "don't solve it with more, solve it with less",
-      "spot, you are disrupting my ability to work",
-      "they live. we sleep."
+      "don't solve with more, solve with less",
+      "spot, you are disrupting my ability to work"
     ];
     this._letters = this._messages.map((el) => el.split(''));
 
