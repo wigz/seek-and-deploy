@@ -23,8 +23,16 @@ export default {
     this._message = 0;
     this._messages = [
       'seek and deploy',
-      'envision a future free from their control',
+      '',
       'v1.0 initializing 9.1.2025'
+    ];
+    this._quotes = [
+      "we fight for the user",
+      "setec astronomy ... too many secrets",
+      "envision a future free from their control",
+      "don't solve it with more, solve it with less",
+      "spot, you are disrupting my ability to work",
+      "they live. we sleep."
     ];
     this._letters = this._messages.map((el) => el.split(''));
 
@@ -40,6 +48,7 @@ export default {
       } else {
         this._step = 0;
         this._delay = 2000;
+        this._letters[1] = this._quotes[Math.floor(Math.random() * this._quotes.length)].split('');
 
         if(this._message < this._messages.length - 1) this._message += 1;
         else this._message = 0;
