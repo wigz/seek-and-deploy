@@ -55,16 +55,11 @@ export default {
 
 <style lang="scss">
 #terminal {
-  position: relative;
-  height: 100%;
+  padding: 20px;
 
   #line-0 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #878f87;
+    color: #828582;
     font-weight: bold;
-    transform: translate(-50%, -50%);
 
     #cursor {
       animation: cursor 1s step-start 0s infinite;
