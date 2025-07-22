@@ -24,12 +24,12 @@ export default {
     this._messages = [
       'seek and deploy',
       '',
-      'v1.0 initializing 9.1.2025'
+      'matt@seekanddeploy.com'
     ];
     this._quotes = [
       "we fight for the user",
       "setec astronomy ... too many secrets",
-      "envision a future free from their control",
+      "follow the white rabbit",
       "don't solve with more, solve with less",
       "spot, you are disrupting my ability to work"
     ];
